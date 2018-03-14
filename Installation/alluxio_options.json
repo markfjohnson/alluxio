@@ -1,0 +1,114 @@
+{
+  "service": {
+    "name": "alluxio-enterprise",
+    "alluxio-distribution": "hadoop-2.7",
+    "log-level": "DEBUG",
+    "master-count": 1,
+    "mesos_api_version": "V1",
+    "service-account": "",
+    "service-account-secret": "",
+    "user": "root",
+    "worker-count": 1,
+    "license": "E-608a83a0-1094a6a2-7a301538-ab7c71f8",
+    "ufs-address": "hdfs://"
+  },
+  "master": {
+    "journal-folder": "",
+    "cpus": 2,
+    "mem": 4096,
+    "disk": 2048,
+    "disk-type": "ROOT",
+    "placement": "hostname:UNIQUE",
+    "job-cpus": 1,
+    "job-mem": 1024,
+    "job-disk": 2048,
+    "job-disk-type": "ROOT",
+    "job-placement": ""
+  },
+  "worker": {
+    "cpus": 1,
+    "mem": 4096,
+    "mem-tier-enabled": true,
+    "mem-ramdisk": 3072,
+    "disk": 2048,
+    "disk-type": "ROOT",
+    "disk-tier-1-enabled": false,
+    "disk-tier-1-size": 2048,
+    "disk-tier-1-type": "ROOT",
+    "disk-tier-1-alias": "SSD",
+    "disk-tier-2-enabled": false,
+    "disk-tier-2-size": 2048,
+    "disk-tier-2-type": "MOUNT",
+    "disk-tier-2-alias": "HDD",
+    "placement": "hostname:UNIQUE",
+    "job-cpus": 1,
+    "job-mem": 1024,
+    "job-disk": 2048,
+    "job-disk-type": "ROOT",
+    "job-placement": ""
+  },
+  "security": {
+    "authentication-type": "NOSASL",
+    "authorization-permission-enabled": false,
+    "keytab-secret": "",
+    "kerberos-primary": "hdfs",
+    "kerberos-instance": "alluxio",
+    "kerberos-realm": "ALLUXIO.COM",
+    "krb5-secret": ""
+  },
+  "docker": {
+    "publish-url": "",
+    "alluxio-client-base": "openjdk:8-jre",
+    "spark-client-base": "mesosphere/spark:1.0.6-2.0.2-hadoop-2.6",
+    "spark-dist-home": "/opt/spark/dist"
+  },
+  "advanced": {
+    "extra-java-opts": "",
+    "extra-client-properties": "",
+    "extra-user-java-opts": "",
+    "extra-master-java-opts": "",
+    "extra-worker-java-opts": "",
+    "extra-job-master-java-opts": "",
+    "extra-job-worker-java-opts": "",
+    "extra-env": "",
+    "extra-keytab-secret-1": "",
+    "extra-keytab-secret-2": "",
+    "extra-keytab-secret-3": "",
+    "extra-keytab-secret-4": "",
+    "extra-keytab-secret-5": "",
+    "custom-resources": ""
+  },
+  "network": {
+    "master-port": 19998,
+    "master-web-port": 19999,
+    "worker-port": 29998,
+    "worker-data-port": 29999,
+    "worker-web-port": 30000,
+    "worker-secure-port": 29997,
+    "job-master-port": 20001,
+    "job-master-web-port": 20002,
+    "job-worker-port": 30001,
+    "job-worker-data-port": 30002,
+    "job-worker-web-port": 30003,
+    "job-worker-secure-port": 30004,
+    "proxy-web-port": 19997
+  },
+  "hdfs": {
+    "endpoint": "",
+    "root-version": "",
+    "journal-version": ""
+  },
+  "s3a": {
+    "aws-access-key": "",
+    "aws-secret-key": ""
+  },
+  "virtual-network": {
+    "enabled": false,
+    "name": "dcos",
+    "plugin-labels": ""
+  },
+  "zookeeper": {
+    "enabled": false,
+    "address": ""
+  }
+}
