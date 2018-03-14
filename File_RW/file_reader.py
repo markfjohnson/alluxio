@@ -4,3 +4,4 @@ sparkSession = SparkSession.builder.appName("example-pyspark-reader").getOrCreat
 
 df_load = sparkSession.read.csv('example.csv')
 df_load.show()
+print("--------------------")
