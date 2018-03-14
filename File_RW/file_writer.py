@@ -5,4 +5,4 @@ data = [('First', 1), ('Second', 2), ('Third', 3), ('Fourth', 4), ('Fifth', 5)]
 df = sparkSession.createDataFrame(data)
 
 # Write into HDFS
-df.write.csv("http://api.hdfs.marathon.l4lb.thisdcos.directory/v1/endpoints/example.csv")
+df.write.csv("example.csv")
